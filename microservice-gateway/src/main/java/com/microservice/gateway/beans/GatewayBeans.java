@@ -4,7 +4,7 @@ import com.microservice.gateway.filters.AuthFilter;
 import lombok.AllArgsConstructor;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.gateway.route.RouteLocator;
-import org.springframework.cloud.gateway.route.RouteLocatorBuilder;
+import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;

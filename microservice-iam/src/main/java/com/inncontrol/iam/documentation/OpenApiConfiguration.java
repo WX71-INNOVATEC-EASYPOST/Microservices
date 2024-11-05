@@ -17,8 +17,8 @@ public class OpenApiConfiguration {
         // General configuration
         var openApi = new OpenAPI();
         openApi.info(new Info()
-                        .title("Inn Control Platform API")
-                        .description("Inn Control application REST API documentation.")
+                        .title("EasyPost Platform API")
+                        .description("IAM Microservice REST API documentation.")
                         .version("v1.0.0")
                         .license(new License().name("Apache 2.0")
                                 .url("https://springdoc.org")))
