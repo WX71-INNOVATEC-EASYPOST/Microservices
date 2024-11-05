@@ -40,9 +40,9 @@ public class GatewayBeans {
                         .uri("lb://msvc-iam")
                 )
                 .route(route -> route
-                        .path("/msvc-profiles/api/v1/profiles/**")
+                        .path("/msvc-request/api/v1/request/**")
                         .filters(filter -> filter.filter(authFilter))
-                        .uri("lb://msvc-profiles")
+                        .uri("lb://msvc-request")
                 )
                 .route(route -> route
                         .path("/msvc-iam/api/v1/authentication/**")
