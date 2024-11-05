@@ -21,8 +21,8 @@ public class RequestCommandServiceImpl implements RequestCommandService {
     }
 
     @Override
-    public Optional<Request> handle(CreateRequestCommand command, Long userIdFrom, Long userIdTo, Long locationId, LocalDateTime issueDate) {
-        var request = new Request(command, userIdFrom, userIdTo, locationId, issueDate);
+    public Optional<Request> handle(CreateRequestCommand command) {
+        var request = new Request(command);
         var createdRequest = requestRepository.save(request);
         return Optional.of(createdRequest);
     }

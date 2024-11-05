@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 public interface RequestCommandService {
-    Optional<Request> handle(CreateRequestCommand command, Long userIdFrom, Long userIdTo, Long locationId, LocalDateTime issueDate);
+    Optional<Request> handle(CreateRequestCommand command);
     Optional<Request> handle(UpdateStatusRequestCommand command);
     void handle(DeleteRequestCommand command);
 }

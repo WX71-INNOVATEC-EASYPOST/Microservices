@@ -38,14 +38,14 @@ public class Request {
     public Request() {
     }
 
-    public Request(CreateRequestCommand command, Long userIdFrom, Long userIdTo, Long locationId, LocalDateTime issueDate) {
-        this.userIdFrom = userIdFrom;
-        this.userIdTo = userIdTo;
+    public Request(CreateRequestCommand command) {
+        this.userIdFrom = command.userIdFrom();
+        this.userIdTo = command.userIdTo();
         this.title = "Request " + command.requestTitle();
         this.description = command.requestDescription();
         this.status = RequestStatus.valueOf(command.requestStatus().toUpperCase());
-        this.locationId = locationId;
-        this.issueDate = issueDate;
+        this.locationId = command.locationId();
+        this.issueDate = command.issueDate();
     }
 
     public void updateDescription(String newDescription) {
