@@ -24,6 +24,7 @@
 
     <module>microservice-iam</module>
     <module>microservice-request</module>
+    <module>microservice-daily-activities</module>
   </modules>
 
   <properties>
