@@ -4,7 +4,7 @@ import com.microservice.gateway.filters.AuthFilter;
 import lombok.AllArgsConstructor;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.gateway.route.RouteLocator;
-import org.springframework.cloud.gateway.route.RouteLocatorBuilder;
+import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -40,9 +40,9 @@ public class GatewayBeans {
                         .uri("lb://msvc-iam")
                 )
                 .route(route -> route
-                        .path("/msvc-profiles/api/v1/profiles/**")
+                        .path("/msvc-request/api/v1/request/**")
                         .filters(filter -> filter.filter(authFilter))
-                        .uri("lb://msvc-profiles")
+                        .uri("lb://msvc-request")
                 )
                 .route(route -> route
                         .path("/msvc-iam/api/v1/authentication/**")
