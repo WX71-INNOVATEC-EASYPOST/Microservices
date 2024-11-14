@@ -24,6 +24,12 @@
 
     <module>microservice-iam</module>
     <module>microservice-request</module>
+    <module>microservice-project</module>
+    <module>microservice-ticket</module>
+    <module>microservice-message</module>
+    <module>microservice-poles</module>
+    <module>microservice-materials</module>
+    <module>microservice-daily_activities</module>
   </modules>
 
   <properties>
