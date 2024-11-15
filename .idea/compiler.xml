@@ -2,30 +2,45 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="microservice-gateway" />
+        <module name="microservice-message" />
         <module name="microservice-project" />
-        <module name="microservice-eureka" />
         <module name="microservice-iam" />
         <module name="microservice-config" />
+        <module name="microservice-poles" />
+        <module name="microservice-ticket" />
+        <module name="microservice-materials" />
+        <module name="microservice-eureka" />
+        <module name="microservice-daily_activities" />
         <module name="microservice-request" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="MessageService" target="17" />
+      <module name="MessageService (1) (com.example)" target="21" />
       <module name="microservice-user" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="MessageService" options="-parameters" />
+      <module name="MessageService (1) (com.example)" options="-parameters" />
       <module name="microservice-config" options="-parameters" />
+      <module name="microservice-daily_activities" options="-parameters" />
       <module name="microservice-eureka" options="-parameters" />
       <module name="microservice-gateway" options="-parameters" />
       <module name="microservice-iam" options="-parameters" />
+      <module name="microservice-materials" options="-parameters" />
+      <module name="microservice-message" options="-parameters" />
+      <module name="microservice-poles" options="-parameters" />
       <module name="microservice-project" options="-parameters" />
       <module name="microservice-request" options="-parameters" />
+      <module name="microservice-ticket" options="-parameters" />
       <module name="microservice-user" options="-parameters" />
     </option>
   </component>
