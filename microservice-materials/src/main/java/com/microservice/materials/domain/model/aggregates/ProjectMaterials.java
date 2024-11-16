@@ -1,5 +1,7 @@
 package com.microservice.materials.domain.model.aggregates;
 
+import com.microservice.materials.domain.model.commands.CreateProjectMaterialCommand;
+import com.microservice.materials.domain.model.commands.UpdateProjectMaterialCommand;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,4 +27,15 @@ public class ProjectMaterials {
     @Column(name = "amount", nullable = false)
     private double amount;
 
+    public ProjectMaterials(CreateProjectMaterialCommand command) {
+        this.projectId = command.projectId();
+        this.materialId = command.materialId();
+        this.amount = command.amount();
+    }
+
+    public void updateProjectMaterial(UpdateProjectMaterialCommand command) {
+        this.projectId = command.projectId();
+        this.materialId = command.materialId();
+        this.amount = command.amount();
+    }
 }
